@@ -739,16 +739,18 @@ class Instagram:
             if len(nama) < 3:
                 continue
             else:
-                nama_capital = nama.capitalize()
                 if kombinasi in ('01') or kombinasi in ('1'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123']
                 elif kombinasi in ('02') or kombinasi in ('2'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123',f'{nama}1234']
-                elif kombinasi in ('03') or kombinasi in ('3'): komb = [f'{nama}321',f'123{nama}',f'1234{nama}',f'12345{nama}',f'321{nama}',f'{nama}01',f'{nama}02',f'{nama}03',f'01{nama}',f'02{nama}',f'03{nama}',f'{nama}04',f'{nama}05',f'{nama}06',f'{nama}07',f'{nama}08',f'{nama}09',f'{nama}10',f'{nama}11',f'{nama}12',f'{nama}22',f'{nama}33',f'{nama}123',f'{nama}1234',f'{nama}12345',f'{nama}1995',f'{nama}1996',f'{nama}1997',f'{nama}1998',f'{nama}1999',f'{nama}2000',f'{nama}2001',f'{nama}2002',f'{nama}2003',f'{nama}2004',f'{nama}2005',f'{nama}2006',f'{nama}2007',f'{nama}2008',f'{nama}2020',f'{nama}2021',f'{nama}2022',f'{nama}2023',f'{nama}2024',f'{nama}2025','akucantik','bismillah','bismillah01','bismillah02','bismillah03','bismillahaja','terserah','gatau lupa','Gatau Lupa','kamu nanya',f'{nama_capital}123',f'{nama_capital}1234',f'{nama_capital}12345',f'{nama_capital}01',f'{nama_capital}02',f'{nama_capital}03']
+                elif kombinasi in ('03') or kombinasi in ('3'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}04',f'{nama}05',f'{nama}95',f'{nama}96',f'{nama}97',f'{nama}98',f'{nama}99',f'{nama}00',f'{nama}2023',f'{nama}2024',f'{nama}2025',f'{nama}2022',f'{nama}2021',f'{nama}2020',f'{nama}12',f'{nama}123',f'{nama}1234',f'{nama}12345']
                 else: komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123',f'{nama}1234',f'{nama}12345']
                 for passwords in komb:
                     if len(passwords) < 6 or str(passwords).isalnum() == False or len(name.split(' ')) > 5:
                         continue
                     else:
                         self.password.append(f'{str(passwords).lower()}')
+            tambahanku = ['akucantik', 'bismillah', 'terserah', 'bismillahaja', 'gatau lupa']
+            for itemmm in tambahanku:
+              self.password.append(itemmm)
         for passwords in [f'{name}', f'{name.replace(" ", "")}']:
             if len(passwords) < 6 or str(passwords).replace(' ', '').isalnum() == False:
                 continue
