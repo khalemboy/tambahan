@@ -1222,14 +1222,14 @@ class Instagram:
                             printz(tree)
                             save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     else:
-			console = Console()
-                        console.print("[italic #C2FFC7]Response Success[/]")
-                        console.print(f"[italic white]Username:[/italic white] [green]{username}[/]")
-                        console.print(f"[italic white]Password:[/italic white] [green]{passwd}[/]")
-                        console.print(f"[italic white]Profiles:[/italic white] [green]{follower}[/]/[green]{followed}[/]/[green]{feedpost}[/]")
-                        console.print(f"[green]{users}[/] [italic white]{response_facebook}[/]")
-                        console.print("[italic white]Cookie:[/italic white]")
-                        console.print(f"[green]{cookie}[/]")
+                        console = Console()
+                        console.printz("[italic #C2FFC7]Response Success[/]")
+                        console.printz(f"[italic white]Username:[/italic white] [green]{username}[/]")
+                        console.printz(f"[italic white]Password:[/italic white] [green]{passwd}[/]")
+                        console.printz(f"[italic white]Profiles:[/italic white] [green]{follower}[/]/[green]{followed}[/]/[green]{feedpost}[/]")
+                        console.printz(f"[green]{users}[/] [italic white]{response_facebook}[/]")
+                        console.printz("[italic white]Cookie:[/italic white]")
+                        console.printz(f"[green]{cookie}[/]")
                         save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     with open('OK-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
