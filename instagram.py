@@ -1222,6 +1222,7 @@ class Instagram:
                             printz(tree)
                             save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     else:
+			console = Console()
                         console.print("[italic #C2FFC7]Response Success[/]")
                         console.print(f"[italic white]Username:[/italic white] [green]{username}[/]")
                         console.print(f"[italic white]Password:[/italic white] [green]{passwd}[/]")
@@ -1229,22 +1230,6 @@ class Instagram:
                         console.print(f"[green]{users}[/] [italic white]{response_facebook}[/]")
                         console.print("[italic white]Cookie:[/italic white]")
                         console.print(f"[green]{cookie}[/]")
-                        tree = Tree('\r                                             ')
-                        tree = tree.add('╭ [italic green]Response Success')
-                        tree.add(f'[italic white]Username [green]{username}')
-                        tree.add(f'[italic white]Fullname [green]{fullname}')
-                        tree.add(f'[italic white]Password [green]{passwd}')
-                        tree.add(f'[italic white]Profiles [green]{follower}[grey50]/[green]{followed}[grey50]/[green]{feedpost}')
-                        trup = tree.add('[italic green]Response Facebook')
-                        trup.add(f'[italic white]Username [green]{users}')
-                        trup.add(f'[italic white]Fullname [green]{fulls}')
-                        trup.add(f'[italic white]Password [green]{passwd}')
-                        trup.add(f'[italic white]Response [green]{response_facebook}')
-                        trua = tree.add('[italic green]Response Cookie')
-                        trua.add(f'[italic white]Cookie [green]{cookie}')
-                        trua.add(f'[italic white]Bearer [green]{ig_set_autorization}')
-                        tree.add(f'[italic white]Useragent [green]{byps.headers["user-agent"]}')
-                        printz(tree)
                         save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     with open('OK-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
