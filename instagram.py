@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8
 
-# create by ArifXeyracodev ID 2024
 
 try:
     import uuid, pytz, hmac, hashlib, urllib, shutil, base64
@@ -1207,31 +1206,32 @@ class Instagram:
                             tree = Tree('\r                                             ')
                             tree = tree.add('╭ [italic green]Response Success')
                             tree.add(f'[italic white]Username [green]{username}')
-                            tree.add(f'[italic white]Fullname [green]{fullname}')
                             tree.add(f'[italic white]Password [green]{passwd}')
                             tree.add(f'[italic white]Profiles [green]{follower}[grey50]/[green]{followed}[grey50]/[green]{feedpost}')
-                            trup = tree.add('[italic green]Response Facebook')
-                            trup.add(f'[italic white]Username [green]{users}')
-                            trup.add(f'[italic white]Fullname [green]{fulls}')
-                            trup.add(f'[italic white]Password [green]{passwd}')
-                            trup.add(f'[italic white]Response [green]{response_facebook}')
-                            trua = tree.add('[italic green]Response Cookie')
-                            trua.add(f'[italic white]Cookie [green]{cookie}')
-                            trua.add(f'[italic white]Bearer [green]{ig_set_autorization}')
-                            tree.add(f'[italic white]Useragent [green]{byps.headers["user-agent"]}')
+                            tree.add('[italic green]Response Facebook')
+                            tree.add(f'[italic white]Username [green]{users}')
+                            tree.add(f'[italic white]Fullname [green]{fulls}')
+                            tree.add(f'[italic white]Password [green]{passwd}')
+                            tree.add(f'[italic white]Response [green]{response_facebook}')
+                            tree.add('[italic green]Response Cookie')
+                            tree.add(f'[italic white]Cookie [green]{cookie}')
                             printz(tree)
                             save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     else:
-                        console = Console()
-                        console.printz("[italic #C2FFC7]Response Success[/]")
-                        console.printz(f"[italic white]Username:[/italic white] [green]{username}[/]")
-                        console.printz(f"[italic white]Password:[/italic white] [green]{passwd}[/]")
-                        console.printz(f"[italic white]Profiles:[/italic white] [green]{follower}[/]/[green]{followed}[/]/[green]{feedpost}[/]")
-                        console.printz(f"[green]{users}[/] [italic white]{response_facebook}[/]")
-                        console.printz("[italic white]Cookie:[/italic white]")
-                        console.printz(f"[green]{cookie}[/]")
+                        tree = Tree('\r                                             ')
+                        tree = tree.add('╭ [italic green]Response Success')
+                        tree.add(f'[italic white]Username [green]{username}')
+                        tree.add(f'[italic white]Fullname [green]{fullname}')
+                        tree.add(f'[italic white]Password [green]{passwd}')
+                        tree.add(f'[italic white]Profiles [green]{follower}[grey50]/[green]{followed}[grey50]/[green]{feedpost}')
+                        tree.add('[italic green]Response Facebook')
+                        tree.add(f'[italic white]Username [green]{users}')
+                        tree.add(f'[italic white]Response [green]{response_facebook}')
+                        tree.add('[italic green]Response Cookie')
+                        trua.add(f'[italic white]Cookie [green]{cookie}')
+                        printz(tree)
                         save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
-                    with open('OK-Instagram-'+self.save_result,'a') as wr:
+                    with open('OK/OK-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()
                     break          
@@ -1241,13 +1241,11 @@ class Instagram:
                     tree = Tree('\r                                             ')
                     tree = tree.add('╭ [italic red]Response A2F')
                     tree.add(f'[italic white]Username : [red]{username}')
-                    tree.add(f'[italic white]Fullname : [red]{fullname}')
                     tree.add(f'[italic white]Password : [red]{passwd}')
-                    tree.add(f'[italic white]Profiles : [red]{follower}[grey50]/[red]{followed}[grey50]/[red]{feedpost}')
                     printz(tree)
                     save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}\n'
                     self.faktor+=1
-                    with open('2F-Instagram-'+self.save_result,'a') as wr:
+                    with open('2F/2F-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()   
                     break 
@@ -1257,13 +1255,12 @@ class Instagram:
                     tree = Tree('\r                                             ')
                     tree = tree.add('╭ [italic yellow]Response Checkpoint')
                     tree.add(f'[italic white]Username : [yellow]{username}')
-                    tree.add(f'[italic white]Fullname : [yellow]{fullname}')
                     tree.add(f'[italic white]Password : [yellow]{passwd}')
-                    tree.add(f'[italic white]Profiles : [yellow]{follower}[grey50]/[yellow]{followed}[grey50]/[yellow]{feedpost}')
+                    tree.add(f'[italic white]Useragent : [yellow]{byps.headers["user-agent"]}')
                     printz(tree)
                     save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}\n'
                     self.chekpoint+=1
-                    with open('CP-Instagram-'+self.save_result,'a') as wr:
+                    with open('CP/CP-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()
                     break    
